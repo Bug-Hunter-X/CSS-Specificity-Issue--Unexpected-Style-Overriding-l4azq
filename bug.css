@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors. The intention is to style both the `.container` element and the `.container p` element with different background colors. However, due to specificity rules, the style applied to the `.container p` element will override the style applied to `.container`. This is because element selectors have higher specificity than class selectors. 
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+p {
+  background-color: lightcoral;
+}
+
+.container p {
+  background-color: lightgreen; 
+}
+```
