@@ -1,0 +1,27 @@
+The solution involves using more specific selectors or adjusting the order to ensure the intended styling is applied.  One approach is to increase the specificity of the container selector by using an id selector, ensuring that the style applied to the container remains unaffected by the child element selector. 
+
+```css
+#container {
+  background-color: lightblue;
+}
+
+p {
+  background-color: lightcoral;
+}
+
+#container p {
+  background-color: lightgreen;
+}
+```
+
+Alternatively, you could use the `!important` flag, but this is generally discouraged due to its potential negative impacts on maintainability.  A cleaner solution would be to refactor the CSS structure for better clarity and specificity. For example you could use a more specific selector for the paragraph element inside the container to avoid the conflict. 
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.container .inner-paragraph {
+  background-color: lightgreen; 
+}
+```
